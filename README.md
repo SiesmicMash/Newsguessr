@@ -2,9 +2,9 @@
 
 A game where you read a news article with its identifying details removed and try to work out which story it is.
 
-Originally built at **Fall Hacks 2025** by **adamw-git, bhavijtChauhan, drsh07, and Me**, where it won **1st place**. Original repo: https://github.com/adamw-git/news-guess
+Originally built at **Fall Hacks 2025** by **adamw-git, bhavijtChauhan, drsh07, and me**, where it won **1st place**. Original repo: [adamw-git/news-guess](https://github.com/adamw-git/news-guess)
 
-This repo continues the project. At the hackathon, removing identifying keywords from scraped articles was done by hand. I'm building a Python/FastAPI backend that automates it using spaCy named entity recognition.
+This repo continues the project. At the hackathon, removing identifying keywords from scraped articles was done by hand. I'm building a Python/FastAPI service that automates it using spaCy named entity recognition.
 
 ## How it works
 
@@ -16,19 +16,29 @@ This repo continues the project. At the hackathon, removing identifying keywords
 
 | Area | Technology |
 |---|---|
-| Frontend | JavaScript, HTML, CSS, Mapbox |
-| Backend | Python, FastAPI |
-| NLP | spaCy (named entity recognition) |
+| Frontend | JavaScript, HTML, CSS |
+| Existing server | Node.js |
+| Redaction service (in progress) | Python, FastAPI, spaCy |
 
 ## Project structure
 
 ```
-newsguessr/
-  client/     # Game frontend (JS, HTML, CSS)
-  backend/    # FastAPI redaction service
+Newsguessr/
+  client/         # Game frontend (JS, HTML, CSS)
+  data/           # Article data
+  scripts/        # Scripts from the hackathon version
+  db.js           # Node database code from the hackathon version
+  backend/        # FastAPI redaction service (in progress)
 ```
 
-## Running the redaction service
+## Running the game
+
+```bash
+npm install
+# [ADD THE COMMAND YOU USE TO START THE APP, e.g. npm start]
+```
+
+## Running the redaction service (in progress)
 
 Requires Python 3.11+.
 
@@ -63,10 +73,6 @@ Example response:
 }
 ```
 
-## Running the frontend
-
-Open `client/index.html` in a browser. The map uses a Mapbox public token (`pk.`), which you need to supply yourself. See `client/mapbox.html`.
-
 ## Roadmap
 
 - [x] Hackathon version of the game with manual article redaction
@@ -75,9 +81,9 @@ Open `client/index.html` in a browser. The map uses a Mapbox public token (`pk.`
 - [ ] Evaluation set of hand-labeled articles, with precision, recall, and leak-rate metrics
 - [ ] Keyword scoring (TF-IDF) to catch story-specific terms that NER misses
 - [ ] Leak check that flags articles where something identifying survived
-- [ ] Article storage and game endpoints (`GET /articles/random`, `POST /articles/{id}/guess`)
-- [ ] Serve the frontend from FastAPI
+- [ ] Connect the redaction service to the game's article pipeline
 - [ ] Docker, CI, and deployment
 
 ## Credits
-Built at Fall Hacks 2025 with adamw-git, bhavijtChauhan, and drsh07. Backend extension by SiesmicMash.
+
+Built at Fall Hacks 2025 with [adamw-git](https://github.com/adamw-git), [bhavijtChauhan](https://github.com/bhavijtChauhan), and [drsh07](https://github.com/drsh07). Redaction service by SiesmicMash.
