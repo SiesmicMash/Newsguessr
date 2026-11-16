@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - NewsGuesser</title>
+    <link rel="stylesheet" href="rules-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="card" role="main">
+      <header>
+        <h1>About</h1>
+        <br>
+      </header>
+      <hr>
+      <h2>Bhavjit Chauhan</h2>
+      <p>Front-end</p>
+
+      <h2>Usaid Ali Syed</h2>
+      <p>Front-end</p>
+
+      <h2>Adam Watson</h2>
+      <p>Data Collection, Database Creation, JS Scripting, Content Redacting, Game Testing</p>
+
+      <h2>Darsh Sood</h2>
+      <p>HTML, JSON, Content Redaction</p>
+      <br />
+      <div class="actions">
+        <a
+          class="btn btn-primary"
+          href="/play.html"
+          aria-label="Start playing the NewsGuesser game"
+          >Play Now!</a
+        >
+        <nav class="nav-links" aria-label="Secondary navigation">
+          <a href="/index.html">Home</a>
+        </nav>
+      </div>
+    </main>
+    <footer class="footer">
+      <small>&copy; <span id="year"></span> NewsGuesser</small>
+    </footer>
+    <script>
+      // Set current year without needing another request
+      document.getElementById('year').textContent = new Date().getFullYear()
+    </script>
+  </body>
+</html>
+ 
