@@ -101,7 +101,7 @@ Example response:
 ## Roadmap
 
 - [x] Hackathon version of the game with manual article redaction
-- [ ] `/redact` endpoint using spaCy NER
+- [x] `/redact` endpoint using spaCy NER
 - [ ] Tests for the redaction stage
 - [ ] Evaluation: measure how often a redacted article still reveals its country
 - [ ] Keyword scoring (TF-IDF) to catch clues that NER misses
