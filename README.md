@@ -80,5 +80,4 @@ Open `client/index.html` in a browser. The map uses a Mapbox public token (`pk.`
 - [ ] Docker, CI, and deployment
 
 ## Credits
-
-Built at [HACKATHON NAME] with [TEAMMATE 1] and [TEAMMATE 2]. Backend extension by [YOUR NAME].
+Built at Fall Hacks 2025 with adamw-git, bhavijtChauhan, and drsh07. Backend extension by SiesmicMash.
